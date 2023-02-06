@@ -203,6 +203,51 @@ a:hover{
 }
 /* product card end */
 
+/* footer start */
+.footer{
+    background-color: #fff;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 3rem;
+}
+
+.footer-container > .footer-contact > p{
+    padding: 0.8rem 0;
+}
+
+.footer-container > .footer-contact > p > i{
+    padding-right: 0.5rem;
+}
+
+.footer-social > a{
+   padding: 1rem;
+   font-size: 1.4rem;
+}
+
+.footer-email > form{
+    position: relative;
+    padding-top: 0.8rem;
+}
+.footer-email > form > input{
+    padding: 0.5rem 2rem;
+}
+.footer-email > form > button{
+    position: absolute;
+    right: 0.8rem;
+    top: 1.32rem;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    color: #7609db;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+/* footer end */
+
+
 
     
 
