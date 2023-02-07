@@ -1,3 +1,17 @@
+// navbar
+// when click humburger icons list menu will show
+function openNavbar() {
+    const navbar =document.querySelector("nav");
+    
+    if (navbar.style.display === "block") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "block";
+    }
+}
+
+
+// slide image top
 let slideIndex = 1;
 showSlides(slideIndex);
 

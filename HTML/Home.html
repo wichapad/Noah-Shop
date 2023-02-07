@@ -12,23 +12,33 @@
 
 <body>
 
-    <nav id="navbar">
+    <header class="header">
         <!-- <img class="logo-image" src="/image/logo.png" alt="logo page"> -->
         <h1 class="logo-navbar">NOAH</h1>
 
-        <ul class="list-navbar">
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Blog</a></li>
-        </ul>
+        <div class="navbar">
+            <div class="hamburger-navbar" onclick="openNavbar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="menu-navbar">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
         <div class="icons-navbar">
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href=""><i class="fa-regular fa-heart"></i></a>
-            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
 
-    </nav>
+
+    </header>
     <div class="container">
         <div class="slideshow-container">
             <div class="mySlides fade">
