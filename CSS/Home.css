@@ -53,39 +53,43 @@ header>.logo-navbar {
 }
 
 /* navbar */
-.navbar{
+.navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* when click icons hamburger menu list will show  */
-.navbar> .hamburger-navbar{
+.navbar>.hamburger-navbar {
     font-size: 22px;
     cursor: pointer;
 }
 
-.navbar> .hamburger-navbar :hover{
+.navbar>.hamburger-navbar :hover {
     color: #7609db;
 }
+
 /* navbar list not show mobile screen */
-header nav {
-    display: none;
-}
 /* navbar list */
-.menu-navbar{
+.menu-navbar {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* icons navbar */
-.icons-navbar{
+.icons-navbar {
     display: flex;
 }
-.icons-navbar > i {
+
+.icons-navbar>i {
     font-size: 20px;
     padding: 0.8rem;
     cursor: pointer;
 }
-.icons-navbar > i:hover{
+
+.icons-navbar>i:hover {
     color: #7609db;
 }
 
@@ -104,7 +108,7 @@ header nav {
 }
 
 .mySlides>img {
-    height: 600px;
+    height: 500px;
     object-fit: cover;
 }
 
@@ -142,15 +146,15 @@ header nav {
 
 .best-seller-container {
     display: grid;
-    grid-gap: .5rem;
+    grid-gap: .3rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.best-seller-container >div{
+.best-seller-container>div {
     display: flex;
     justify-content: center;
-    
 }
+
 .best-seller-container>div>img {
     width: 100%;
     height: 100%;
@@ -165,11 +169,13 @@ header nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .band-logo-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .band-logo-image>img {
     width: 100px;
     cursor: pointer;
@@ -186,7 +192,7 @@ header nav {
 }
 
 .product-sort-left {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -196,8 +202,9 @@ header nav {
 }
 
 .product-sort-option {
+    font-size: 0.8rem;
     font-weight: 500;
-    padding: 0.5rem;
+    padding: 0.3rem;
     cursor: pointer;
 }
 
@@ -211,19 +218,18 @@ header nav {
 .product-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5rem;
 }
 
 .product-card-component {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 1rem 0;
 }
 
 .product-card-component>img {
-    width: 250px;
+    width: 200px;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
@@ -280,20 +286,21 @@ header nav {
     padding-right: 0.5rem;
 }
 
-.footer-social{
+.footer-social {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .footer-social>a {
-    display: block; 
+    display: block;
     padding: 1rem;
     font-size: 1.5rem;
 }
-.footer-email{
+
+.footer-email {
     display: flex;
     align-items: center;
-    
 }
 
 .footer-email>form {
@@ -321,5 +328,76 @@ header nav {
 /* footer end */
 
 @media (min-width: 768px) {
+    .menu-navbar {
+        
+        flex-direction: row;
+    }
+
+    /* grid container image  start*/
+
+    .best-seller-container {
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-areas:
+            "photoOne photoTwo photoTwo"
+            "photoOne photoThree photoFour"
+        ;
+        /* grid-template-columns: 50% 25% ; */
+        grid-template-columns: 450px ;
+    }
+
+    .best-seller-container>div:first-child {
+        grid-area: photoOne;
+    }
+
+    .best-seller-container>div:nth-child(2) {
+        grid-area: photoTwo;
+        height: 200px;
+    }
+
+    .best-seller-container>div:nth-child(3) {
+        grid-area: photoThree;
+    }
+
+    .best-seller-container>div:nth-child(4) {
+        grid-area: photoFour;
+    }
+
+    .best-seller-container>div>img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* grid container image end*/
+
+    .band-logo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px){
+    .best-seller-container {
+        grid-template-columns: 450px ;
+    }
+
+    .band-logo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-email {
+        display: block;
+    }
+
+    .footer-email > form {
+        padding: 0;
+    }
 
 }
