@@ -1,0 +1,36 @@
+/* grid container image start*/
+
+.best-seller-container {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-areas:
+        "photoOne photoTwo photoTwo"
+        "photoOne photoThree photoFour"
+    ;
+    /* grid-template-columns: 50% 25% ; */
+    grid-template-columns: 550px 250px;
+}
+
+.best-seller-container>div:first-child {
+    grid-area: photoOne;
+}
+
+.best-seller-container>div:nth-child(2) {
+    grid-area: photoTwo;
+    height: 200px;
+}
+
+.best-seller-container>div:nth-child(3) {
+    grid-area: photoThree;
+}
+
+.best-seller-container>div:nth-child(4) {
+    grid-area: photoFour;
+}
+
+.best-seller-container>div>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* grid container image end*/

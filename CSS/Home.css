@@ -143,32 +143,16 @@ header nav {
 .best-seller-container {
     display: grid;
     grid-gap: .5rem;
-    grid-template-areas:
-        "photoOne photoTwo photoTwo"
-        "photoOne photoThree photoFour"
-    ;
-    /* grid-template-columns: 50% 25% ; */
-    grid-template-columns: 550px 250px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.best-seller-container>div:first-child {
-    grid-area: photoOne;
+.best-seller-container >div{
+    display: flex;
+    justify-content: center;
+    
 }
-
-.best-seller-container>div:nth-child(2) {
-    grid-area: photoTwo;
-    height: 200px;
-}
-
-.best-seller-container>div:nth-child(3) {
-    grid-area: photoThree;
-}
-
-.best-seller-container>div:nth-child(4) {
-    grid-area: photoFour;
-}
-
 .best-seller-container>div>img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -178,11 +162,14 @@ header nav {
 /* logo image start */
 .band-logo-container {
     margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.band-logo-image {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
-
 .band-logo-image>img {
     width: 100px;
     cursor: pointer;
@@ -210,7 +197,7 @@ header nav {
 
 .product-sort-option {
     font-weight: 500;
-    padding: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
 }
 
@@ -223,17 +210,21 @@ header nav {
 /* product card start */
 .product-card {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem;
 }
 
 .product-card-component {
-    width: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
     margin: 1rem 0;
 }
 
 .product-card-component>img {
-    height: 300px;
+    width: 250px;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
 }
@@ -252,7 +243,19 @@ header nav {
 
 .product-card-component>.product-card-des>p:last-child {
     font-weight: 500;
+    font-size: 12px;
 }
+
+.product-card-component>.product-card-des>i {
+    padding-top: 0.5rem;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.product-card-component>.product-card-des>i:hover {
+    color: #7609db;
+}
+
 
 /* product card end */
 
@@ -263,8 +266,10 @@ header nav {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    padding: 5rem 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
 }
 
 .footer-container>.footer-contact>p {
@@ -285,10 +290,15 @@ header nav {
     padding: 1rem;
     font-size: 1.5rem;
 }
+.footer-email{
+    display: flex;
+    align-items: center;
+    
+}
 
 .footer-email>form {
     position: relative;
-    padding-top: 0.8rem;
+    padding: 0 0 0 1rem;
 }
 
 .footer-email>form>input {
@@ -298,7 +308,7 @@ header nav {
 .footer-email>form>button {
     position: absolute;
     right: 0.8rem;
-    top: 1.8rem;
+    top: 1.1rem;
     background: none;
     border: none;
     text-transform: uppercase;
@@ -309,3 +319,7 @@ header nav {
 }
 
 /* footer end */
+
+@media (min-width: 768px) {
+
+}
