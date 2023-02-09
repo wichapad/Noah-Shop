@@ -53,9 +53,6 @@ header>.logo-navbar {
 }
 
 /* navbar */
-.navbar>nav {
-    display: none;
-}
 
 .navbar {
     display: flex;
