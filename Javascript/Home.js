@@ -1,5 +1,5 @@
 // navbar
-// when click humburger icons list menu will show
+// ขนาดหน้าจอมือถือ กับ tablet จะมี icons menu เมื่อคลิ๊ก จะโชว์ เมนู navbar 
 function openNavbar() {
     const navbar =document.querySelector("nav");
     
@@ -8,10 +8,11 @@ function openNavbar() {
     } else {
         navbar.style.display = "block";
     }
+    
 }
 
 
-// slide image top
+// slide image
 let slideIndex = 1;
 showSlides(slideIndex);
 

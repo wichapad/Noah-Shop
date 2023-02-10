@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+body { /* กำหนด style font ของเว็บ */
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(228, 226, 226);
 }
@@ -53,6 +53,9 @@ header>.logo-navbar {
 }
 
 /* navbar */
+nav {
+    display: none;
+}
 
 .navbar {
     display: flex;
@@ -60,7 +63,7 @@ header>.logo-navbar {
     align-items: center;
 }
 
-/* when click icons hamburger menu list will show  */
+/* คลิ๊กปุ่ม icons menu จะเห็นในหน้าจอ ขนาด 1023px ลงไป  */
 .navbar>.hamburger-navbar {
     font-size: 22px;
     cursor: pointer;
@@ -70,9 +73,8 @@ header>.logo-navbar {
     color: #7609db;
 }
 
-/* navbar list not show mobile screen */
 /* navbar list */
-.menu-navbar {
+.menu-navbar { /* ทำ menu navbar เรียงต่อกัน ด้วย column จะเห็นต้องเป็น phone หน้าจอเล็กกว่า 768 px ลงไป*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,13 +86,13 @@ header>.logo-navbar {
     display: flex;
 }
 
-.icons-navbar>i {
+.icons-navbar>i { /*กำหนดขนาดของ icons navbar*/
     font-size: 20px;
     padding: 0.8rem;
     cursor: pointer;
 }
 
-.icons-navbar>i:hover {
+.icons-navbar>i:hover { /*เมื่อชี้ไปที่ icons navbar จะเปลี่ยนสี*/
     color: #7609db;
 }
 
@@ -106,12 +108,12 @@ header>.logo-navbar {
 /* image slideshow */
 
 
-.mySlides>img {
+.mySlides>img { /*กำหนดความสูง ของรูปภาพ*/
     height: 500px;
     object-fit: cover;
 }
 
-/* next & previous button */
+/* ปุ่มเปลี่ยนภาพ เมื่อคลิ๊กจะเปลี่ยนภาพไปด้านหน้าและย้อนหลัง */
 .prev,
 .next {
     cursor: pointer;
@@ -126,12 +128,12 @@ header>.logo-navbar {
     border-radius: 0 3px 3px 0;
 }
 
-/* position next button to the right */
+/* จัดตำแหน่งปุ่ม เปลี่ยนภาพไปด้านขวาของ diw */
 .next {
     right: 0;
 }
 
-/* hover, add blackground back, color white */
+/* ชี้ที่ปุ่มเปลี่ยนภาพ จะเปลี่ยนเป็นสีขาว และพื้นหลังดำโปร่งใส่ */
 .prev:hover,
 .next:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -143,19 +145,19 @@ header>.logo-navbar {
 
 /* grid container image start*/
 
-.best-seller-container {
+.best-seller-container { /*กำหนด image  เป็น 2 column 2 row ขนาด row 180 px*/
     display: grid;
     grid-gap: .5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 180px);
 }
 
-.best-seller-container>div:first-child {
+.best-seller-container>div:first-child { /*div แรก ให้พื้นที่ 2 row และจาก column 1 ถึง 2*/
     grid-row: span 2;
     grid-column: 1 / span 2;
 }
 
-.best-seller-container>div:nth-child(2) {
+.best-seller-container>div:nth-child(2) { /*div 2 ให้พื้นที่  column 3 ถึง 5*/
     grid-column: 3 / 5;
 }
 
@@ -169,7 +171,7 @@ header>.logo-navbar {
     cursor: pointer;
 }
 
-.best-seller-container>div>p {
+.best-seller-container>div>p { /*กำหนด tag P ให้อยู่ในรูปภาพ  */
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -184,19 +186,19 @@ header>.logo-navbar {
 /* grid container image end*/
 
 /* logo image start */
-.band-logo-container {
+.band-logo-container { /* กำหนด logo image เป็น 2 column */
     margin: 2rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.band-logo-image {
+.band-logo-image { 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.band-logo-image>img {
+.band-logo-image>img { /*กำหนดขนาด logo image*/
     width: 100px;
     cursor: pointer;
 }
@@ -205,43 +207,44 @@ header>.logo-navbar {
 
 
 /* product-sort start */
-.product-sort {
+.product-menu { /*กำหนด text หัวข้อ และ text menu ให้เรียงแถวเดียวกัน และกำหนดระยะห่าง*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0.8rem;
 }
 
-.product-sort-left {
+.product-menu-left { /* กำหนดขนาด text หัวข้อ*/
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.product-sort-right {
+.product-menu-right { /* กำหนด menu option ให้เรียงกัน แถวเดียว*/
     display: flex;
 }
 
-.product-sort-option {
+.product-menu-option { /*กำหนด size ของ text */
     font-size: 0.8rem;
     font-weight: 500;
     padding: 0.3rem;
     cursor: pointer;
 }
 
-.product-sort-option:hover {
+.product-menu-option:hover { /* ชี้ปุ่ม menu option จะ เปลี่ยนสี*/
     color: #7609db;
 }
 
 /* product-sort end */
 
 /* product card start */
-.product-card {
+
+.product-card { /* ทำ div product 2 column */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.product-card-component {
+.product-card-component { /* กำหนดรูปภาพสินค้า และ ข้อความ ให้เรียงต่อกันลงมา */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +252,7 @@ header>.logo-navbar {
     margin: 1rem 0;
 }
 
-.product-card-component>img {
+.product-card-component>img { /* กำหนดขนาดภาพสินค้า */
     width: 200px;
     height: 280px;
     object-fit: cover;
@@ -259,29 +262,29 @@ header>.logo-navbar {
 
 }
 
-.product-card-component>img:hover {
+.product-card-component>img:hover { /* เมื่อชี้ไปที่รูปภาพสินค้า จะขยายใหญ่ขึ้น */
     transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.product-card-component>.product-card-des {
+.product-card-component>.product-card-des { /* ทำ text ข้อมูลสิ้นค้า เรียงกันลงมา */
     margin: 1rem 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.product-card-component>.product-card-des>p:first-child {
+.product-card-component>.product-card-des>p:first-child { /* ทำตัวหนาของตัวอักษร tag p ตัวแรกใน div */
     font-weight: 700;
     padding-bottom: 0.8rem;
 }
 
-.product-card-component>.product-card-des>p:last-child {
+.product-card-component>.product-card-des>p:last-child { /* ขยายตัวอักษร tag p ตัวสุดท้ายใน div */
     font-weight: 500;
     font-size: 12px;
 }
 
-.product-card-component>.product-card-des>i {
+.product-card-component>.product-card-des>i { /* ขยาย ตัวอักษรและ icons ปุ่ม add cart และทำให้คลิ๊กได้ */
     padding-top: 0.8rem;
     font-size: 12px;
     cursor: pointer;
@@ -295,11 +298,13 @@ header>.logo-navbar {
 /* product card end */
 
 /* footer start */
+
 .footer {
-    background-color: #fff;
+    background-color: #fff; /* พื้นหลังเป็นสีขาว */
 }
 
-.footer-container {
+
+.footer-container { /* ในส่วนของ footer เรียงต่อกันลงมา */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,33 +320,33 @@ header>.logo-navbar {
     padding-right: 0.5rem;
 }
 
-.footer-social {
+.footer-social { /* ทำให้ icons social เรียงต่อกัน แถวเดียว */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer-social>a {
+.footer-social>a { /* กำหนดระยะห่าง ระหว่าง icons social */
     display: block;
     padding: 1rem;
     font-size: 1.5rem;
 }
 
-.footer-email {
+.footer-email { /* ทำส่วน email เรียงต่อการ */
     display: flex;
     align-items: center;
 }
 
-.footer-email>form {
+.footer-email>form { /* จัดตำแหน่ง div ของ form และ ทำระยะห่าง ระหว่าง text หัวข้อ กับ form */
     position: relative;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 0.8rem;
 }
 
-.footer-email>form>input {
+.footer-email>form>input { /* ขยาย ช่อง ใส่ email */
     padding: 1rem 7rem 1rem 0.5rem;
 }
 
-.footer-email>form>button {
+.footer-email>form>button { /* ทำ ปุ่ม subscribe ให้มาอยู่ในช่อง form */
     position: absolute;
     right: 0.8rem;
     top: 1.1rem;
@@ -357,44 +362,54 @@ header>.logo-navbar {
 /* footer end */
 
 @media (min-width: 768px) {
-    .menu-navbar {
 
+    .menu-navbar { /* menu navbar เรียงเป็นแถวเดียว */
         flex-direction: row;
     }
 
-
-    .band-logo-container {
+    .band-logo-container { /* ทำ logo band เป็น 3 column */
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .product-sort-option {
+    .product-menu-option { /* ขยายตัวอักษร ปุ่มเมนู menu option*/
         font-size: 1rem;
     }
 
-    .product-card {
+    .product-card { /* ทำ div product 3 column */
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
 
+    nav { /* โชว์ เมนู navbar */
+        display: block; 
+    }
 
-    .band-logo-container {
+    .hamburger-navbar { /* ซ่อน icons menu ในขนาดนหา้จอ desktop */
+        display: none;
+    }
+
+    .band-logo-container {  /* ส่วน logo band จะเรียงแถวเดียว */
         display: flex;
         justify-content: space-evenly;
     }
 
-    .product-card {
+    .product-card { /* ทำ div product 4 column */
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .footer-container {
+    .footer-container { /* ส่วน footer เรียงเป็นแถวเดียวกัน */
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .footer-email {
+    .footer-email { /* ส่วน footer email text หัวข้อ จะอยู่ด้านบนช่อง กรอก email */
         display: block;
+    }
+
+    .footer-email>h4 {
+        padding-bottom: 0.8rem;
     }
 
     .footer-email>form {
