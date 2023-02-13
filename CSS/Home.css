@@ -189,7 +189,8 @@ nav {
 .band-logo-container { /* กำหนด logo image เป็น 2 column */
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    
 }
 
 .band-logo-image { 
@@ -241,7 +242,8 @@ nav {
 
 .product-card { /* ทำ div product 2 column */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 0.5rem;
 }
 
 .product-card-component { /* กำหนดรูปภาพสินค้า และ ข้อความ ให้เรียงต่อกันลงมา */
@@ -366,18 +368,10 @@ nav {
     .menu-navbar { /* menu navbar เรียงเป็นแถวเดียว */
         flex-direction: row;
     }
-
-    .band-logo-container { /* ทำ logo band เป็น 3 column */
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     .product-menu-option { /* ขยายตัวอักษร ปุ่มเมนู menu option*/
         font-size: 1rem;
     }
 
-    .product-card { /* ทำ div product 3 column */
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media (min-width: 1024px) {
@@ -388,15 +382,6 @@ nav {
 
     .hamburger-navbar { /* ซ่อน icons menu ในขนาดนหา้จอ desktop */
         display: none;
-    }
-
-    .band-logo-container {  /* ส่วน logo band จะเรียงแถวเดียว */
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .product-card { /* ทำ div product 4 column */
-        grid-template-columns: repeat(4, 1fr);
     }
 
     .footer-container { /* ส่วน footer เรียงเป็นแถวเดียวกัน */
