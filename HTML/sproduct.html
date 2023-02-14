@@ -7,8 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>Shop</title>
+    <title></title>
 </head>
+
+<style>
+    .sproduct-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .sproduct-size {
+        margin: 0.5rem 0;
+    }
+
+    .sproduct-size>select {
+        outline: none;
+        border-radius: 3px;
+        height: 25px;
+        padding-left: 0.2rem;
+    }
+
+    .sproduct-amount {
+        display: flex;
+    }
+
+    .sproduct-form {
+        margin-right: 0.8rem;
+    }
+
+    .sproduct-form>input {
+        width: 45px;
+        height: 40px;
+        font-size: 16px;
+        border: 1px solid rgb(134, 134, 134);
+        outline: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .sproduct-amount>button {
+        padding: 0.8rem 1.8rem;
+        border: none;
+        font-weight: 700;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+    }
+
+    .sproduct-amount>button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .sproduct-amount>button:active {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .spoduct-detail {
+        margin-top: 0.8rem;
+    }
+
+    .spoduct-detail>p {
+        padding-top: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    @media (min-width: 960px) {
+        .sproduct {
+            display: flex;
+            margin: 1rem;
+        }
+
+        .sproduct-image {
+            height: 550px;
+            object-fit: cover;
+        }
+
+        .sproduct-image>img {
+            width: 450px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sproduct-description {
+            display: block;
+            margin: 2rem;
+        }
+
+        .sproduct-name{
+            margin: 1rem 0;
+        }
+        .spoduct-detail{
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            margin: 4rem 0;
+            grid-gap: 4rem;
+        }
+
+    }
+</style>
 
 <body>
     <!-- navbar ของ website -->
@@ -38,31 +143,55 @@
     </header>
 
     <div class="container">
-        <div class="product-menu">
-            <div class="product-menu-left">
-                Shop Products
+        <div class="sproduct">
+            <div class="sproduct-image">
+                <img src="/image/product/adidas-product.jpg" alt="">
             </div>
-            <div class="product-menu-right">
-                <div class="product-menu-option">
-                    All
+            <div class="sproduct-description">
+                <div class="back-page">
+                    <a href="/HTML/Home.html">Home</a>
+                    /
+                    <a href="/HTML/shop.html">Shop</a>
+                    /
+                    <a href="">shoes</a>
                 </div>
-                <div class="product-menu-option">
-                    Tecnology
+                <div class="sproduct-name">
+                    <h3>Adidas Original Shoes</h3>
                 </div>
-                <div class="product-menu-option">
-                    Clothing
+                <div class="sproduct-price">
+                    <h3>$200.00</h3>
                 </div>
-                <div class="product-menu-option">
-                    Accessories
+                <div class="sproduct-size">
+                    <select name="size" id="size" form="sizeform">
+                        <option value="0">Select Size</option>
+                        <option value="1">3.5UK</option>
+                        <option value="2">4UK</option>
+                        <option value="3">4.5UK</option>
+                        <option value="4">5UK</option>
+                        <option value="5">5.5UK</option>
+                        <option value="6">6UK</option>
+                    </select>
                 </div>
-                <div class="product-menu-option">
-                    Bag
+
+                <div class="sproduct-amount">
+                    <form class="sproduct-form" action="">
+                        <input type="number" id="quantity" name="quantity" min="1" max="10">
+                    </form>
+                    <button>Add To Cart</button>
+                </div>
+
+                <div class="spoduct-detail">
+                    <h2>Product Detail</h2>
+                    <p>Timeless appeal. Effortless style. Everyday versatility. For over 50 years and counting, adidas
+                        Stan Smith Shoes have continued to hold their place as an icon. This pair shows off a fresh
+                        redesign as part of adidas' commitment to use only recycled polyester by 2024. With a vegan
+                        upper and an outsole made from rubber waste, they still have iconic style, they're just made
+                        with the planet in mind.</p>
                 </div>
             </div>
         </div>
-
         <div class="product-card">
-            <div class="product-card-component" onclick="window.location.href='sproduct.html'">
+            <div class="product-card-component">
                 <img src="/image/product/adidas-product.jpg" alt="">
                 <div class="product-card-des">
                     <p>Adidas Shoes</p>
@@ -71,30 +200,7 @@
 
                 </div>
             </div>
-            <div class="product-card-component">
-                <img src="/image/product/applewatch-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Apple Watch</p>
-                    <p>15000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/macbook-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Macbook</p>
-                    <p>45000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/necklace-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Dior Necklace</p>
-                    <p>80000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
+
             <div class="product-card-component">
                 <img src="/image/product/nike-product.jpg" alt="">
                 <div class="product-card-des">
@@ -103,6 +209,7 @@
                     <i class="fa-solid fa-cart-shopping">Add To Cart</i>
                 </div>
             </div>
+
             <div class="product-card-component">
                 <img src="/image/product/northface-product.jpg" alt="">
                 <div class="product-card-des">
@@ -111,14 +218,7 @@
                     <i class="fa-solid fa-cart-shopping">Add To Cart</i>
                 </div>
             </div>
-            <div class="product-card-component">
-                <img src="/image/product/Samsung-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Sumsung S23</p>
-                    <p>43000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
+
             <div class="product-card-component">
                 <img src="/image/product/socks-product.jpg" alt="">
                 <div class="product-card-des">
@@ -130,7 +230,8 @@
             </div>
         </div>
     </div>
-    
+
+
 
     <!-- ส่วนล่างของ website จะมี ที่อยู่ web , social , ปุ่มส่ง email เพื่อรับข่าวสาร -->
     <div class="footer">
