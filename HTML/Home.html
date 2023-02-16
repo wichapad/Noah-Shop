@@ -34,6 +34,9 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cart-count">
+                0
+            </div>
         </div>
 
 
@@ -214,7 +217,37 @@
         </div>
     </div>
 
-
+    <!-- modal cart-->
+    <div class="modal">
+        <div class="modal-bg">
+            <div class="modal-page">
+                <div class="modal-text-header">
+                    <h2>Order Now</h2>
+                </div>
+                <div class="modal-cartlist-items">
+                    <div class="modal-cartlist-left">
+                        <div class="modal-image-product">
+                            <img src="/image/product/adidas-product.jpg" alt="">
+                        </div>
+                        <div class="modal-description">
+                            <h4>Adidas original shoes</h4>
+                            <p>Size : <span> 6 UK</span></p>
+                            <p>1250 ฿</p>
+                        </div>
+                    </div>
+                    <div class="modal-cartlist-right">
+                        <i class="fa-solid fa-minus"></i>
+                        <span class="modal-product-count">1</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="modal-button">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="/Javascript/Home.js"></script>
