@@ -11,28 +11,7 @@ function openNavbar() {
 
 }
 
-
-// slide image
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
-
-
-// สร้าง array ข้อมูล รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า 
+// 
 const product = [{
     id: 1,
     img: "adidas-product.jpg",
@@ -84,7 +63,6 @@ for (let i = 0; i < product.length; i++) {
     
 }
 
-// ทำลูกน้ำ หน่วยเงิน
 function numberWithCommas(x) {
     x = x.toString();
     var pattern = /(-?\d+)(\d{3})/;
@@ -92,9 +70,3 @@ function numberWithCommas(x) {
         x = x.replace(pattern, "$1,$2");
     return x;
 }
-
-
-
-
-
-

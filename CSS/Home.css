@@ -13,7 +13,7 @@ body {
     background-color: rgb(228, 226, 226);
 }
 
-.container {
+#container {
     max-width: 1200px;
 
     margin: 0 auto;
@@ -316,16 +316,15 @@ nav {
     align-items: center;
 }
 
-.product-card-component>.product-card-des>p:first-child {
+.product-card-component>.product-card-des>.name-product {
     /* ทำตัวหนาของตัวอักษร tag p ตัวแรกใน div */
     font-weight: 700;
     padding-bottom: 0.8rem;
 }
 
-.product-card-component>.product-card-des>p:last-child {
+.product-card-component>.product-card-des>.price-product {
     /* ขยายตัวอักษร tag p ตัวสุดท้ายใน div */
     font-weight: 500;
-    font-size: 12px;
 }
 
 .product-card-component>.product-card-des>i {
@@ -429,6 +428,7 @@ nav {
 }
 
 .modal-page {
+    
     width: 50vw;
     background-color: rgb(228, 226, 226);
     border-radius: 15px;
@@ -496,6 +496,7 @@ nav {
     height: 50px;
     margin: 0 0.3rem;
     border: none;
+    border-radius: 5px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;

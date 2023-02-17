@@ -33,11 +33,14 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cart-count">
+                0
+            </div>
         </div>
 
     </header>
 
-    <div class="container">
+    <div id="container">
         <div class="product-menu">
             <div class="product-menu-left">
                 Shop Products
@@ -56,81 +59,17 @@
                     Accessories
                 </div>
                 <div class="product-menu-option">
-                    Bag
+                    Bags
                 </div>
             </div>
         </div>
 
-        <div class="product-card">
-            <div class="product-card-component" onclick="window.location.href='sproduct.html'">
-                <img src="/image/product/adidas-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Adidas Shoes</p>
-                    <p>1250 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
+        <!-- ข้อมูลสินค้า รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า -->
+        <div id="productCard" class="product-card" onclick="window.location.href='sproduct.html'">
 
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/applewatch-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Apple Watch</p>
-                    <p>15000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/macbook-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Macbook</p>
-                    <p>45000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/necklace-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Dior Necklace</p>
-                    <p>80000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/nike-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Nike T-shirt</p>
-                    <p>890 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/northface-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>NorthFace</p>
-                    <p>15600 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/Samsung-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Sumsung S23</p>
-                    <p>43000 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-            </div>
-            <div class="product-card-component">
-                <img src="/image/product/socks-product.jpg" alt="">
-                <div class="product-card-des">
-                    <p>Nike Socks</p>
-                    <p>750 ฿</p>
-                    <i class="fa-solid fa-cart-shopping">Add To Cart</i>
-                </div>
-
-            </div>
         </div>
     </div>
-    
+
 
     <!-- ส่วนล่างของ website จะมี ที่อยู่ web , social , ปุ่มส่ง email เพื่อรับข่าวสาร -->
     <div class="footer">
@@ -158,7 +97,7 @@
         </div>
     </div>
 
-    <script src="/Javascript/Home.js"></script>
+    <script src="/Javascript/Shop.js"></script>
 </body>
 
 </html>
