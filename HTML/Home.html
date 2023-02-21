@@ -104,27 +104,30 @@
                 Shop Products
             </div>
             <div class="product-menu-right">
-                <div class="product-menu-option">
+                <div onclick="menuProduct('all')" class="product-menu-option">
                     All
                 </div>
-                <div class="product-menu-option">
-                    Tecnology
+                <div onclick="menuProduct('technology')" class="product-menu-option">
+                    Technology
                 </div>
-                <div class="product-menu-option">
+                <div onclick="menuProduct('clothing')" class="product-menu-option">
                     Clothing
                 </div>
-                <div class="product-menu-option">
+                <div onclick="menuProduct('shoes')" class="product-menu-option">
+                    Shoes
+                </div>
+                <div onclick="menuProduct('accessories')" class="product-menu-option">
                     Accessories
                 </div>
-                <div class="product-menu-option">
+                <div onclick="menuProduct('bags')" class="product-menu-option">
                     Bags
                 </div>
             </div>
         </div>
-        
-        <!-- ข้อมูลสินค้า รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า -->
-        <div id="productCard" class="product-card" onclick="window.location.href='sproduct.html'">
-            
+
+        <!-- ข้อมูลสินค้า รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า onclick="window.location.href='sproduct.html'"-->
+        <div id="productCard" class="product-card" >
+
         </div>
     </div>
 
@@ -156,7 +159,7 @@
 
     <!-- modal cart-->
     <div class="modal" style="display: none;">
-        
+        <div class="bg-modal">
             <div class="modal-page">
                 <div class="modal-text-header">
                     <h2>Order Now</h2>
@@ -183,7 +186,7 @@
                     <button class="buy-btn">Buy</button>
                 </div>
             </div>
-        
+        </div>
     </div>
 </body>
 
