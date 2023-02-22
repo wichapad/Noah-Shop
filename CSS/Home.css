@@ -52,6 +52,7 @@ header {
 header>.logo-navbar {
     font-size: 2.5rem;
     font-family: 'Cinzel', serif;
+    cursor: pointer;
 }
 
 /* navbar */
@@ -279,7 +280,7 @@ nav {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 0.5rem;
     margin: 1rem;
-    cursor: pointer;
+    
 }
 
 .product-card-component {
@@ -292,6 +293,7 @@ nav {
     border: 1px solid rgb(168, 168, 168);
     border-radius: 5px;
     transition: 0.3s all ease-in-out;
+    cursor: pointer;
 }
 
 .product-card-component>img {
@@ -414,9 +416,9 @@ nav {
 
 /* footer end */
 
-/* modal website  start*/
-.modal,
-.bg-modal {
+/* addToCart website  start*/
+#addToCart,
+.bg-addToCart {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -428,7 +430,7 @@ nav {
     align-items: center;
 }
 
-.modal-page {
+.addToCart-page {
     
     width: 50vw;
     background-color: rgb(228, 226, 226);
@@ -436,63 +438,63 @@ nav {
     padding: 20px;
 }
 
-.modal-cartlist-items {
+.addToCart-cartlist-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
 }
 
-.modal-cartlist-left {
+.addToCart-cartlist-left {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-cartlist-left>.modal-image-product {
+.addToCart-cartlist-left>.addToCart-image-product {
     width: 180px;
 }
 
-.modal-cartlist-left>.modal-image-product>img {
+.addToCart-cartlist-left>.addToCart-image-product>img {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.modal-cartlist-left>.modal-description {
+.addToCart-cartlist-left>.addToCart-description {
     padding-left: 1rem;
     font-size: 18px;
     font-weight: 500;
 }
 
-.modal-cartlist-right{
+.addToCart-cartlist-right{
     font-size: 20px;
     padding: 1rem;
 }
-.modal-cartlist-right > i{
+.addToCart-cartlist-right > i{
     border-radius: 50%;
     padding: 0.4rem;
     transition: 0.2s all ease-in-out;
     cursor: pointer;
 }
-.modal-cartlist-right > i:hover{
+.addToCart-cartlist-right > i:hover{
     color: #fff;
 }
-.modal-cartlist-right > i:active{
+.addToCart-cartlist-right > i:active{
     color: #000;
     transition: 0.2s all ease-in-out;
 }
-.modal-cartlist-right > .modal-product-count{
+.addToCart-cartlist-right > .addToCart-product-count{
     padding: 0.3rem;
 }
 
-.modal-button{
+.addToCart-button{
     margin-top: 1rem;
     display: flex;
     justify-content: end;
     align-items: center;
 }
-.modal-button > button{
+.addToCart-button > button{
     width: 90px;
     height: 50px;
     margin: 0 0.3rem;
@@ -504,22 +506,22 @@ nav {
     font-weight: 500;
     cursor: pointer;
 }
-.modal-button > .cancel-btn{
+.addToCart-button > .cancel-btn{
     background-color: rgb(255, 0, 0);
     transition: 0.2s all ease-in-out;
 }
-.modal-button > .cancel-btn:hover{
+.addToCart-button > .cancel-btn:hover{
     background-color: rgb(255, 61, 61);
 }
-.modal-button > .buy-btn{
+.addToCart-button > .buy-btn{
     background-color: rgb(4, 0, 255);
     transition: 0.2s all ease-in-out;
 }
-.modal-button > .buy-btn:hover{
+.addToCart-button > .buy-btn:hover{
     background-color: rgb(68, 65, 255);
 }
 
-/* modal website  end*/
+/* addToCart website  end*/
 
 
 

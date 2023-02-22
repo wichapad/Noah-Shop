@@ -1,7 +1,7 @@
 // navbar
 // ขนาดหน้าจอมือถือ กับ tablet จะมี icons menu เมื่อคลิ๊ก จะโชว์ เมนู navbar 
 function openNavbar() {
-    const navbar = document.querySelector("nav");
+    var navbar = document.querySelector("nav");
 
     if (navbar.style.display === "block") {
         navbar.style.display = "none";
@@ -32,8 +32,8 @@ function showSlides(n) {
 }
 
 
-// สร้าง array ข้อมูล รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า 
-const product = [
+// สร้าง array เก็บข้อมูล รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า 
+var product = [
     {
         id: 1,
         img: "adidas-product.jpg",
@@ -98,34 +98,40 @@ const product = [
     }
 ];
 
-const productCart = document.querySelector("#productCard");
-
+var html = "";
 for (let i = 0; i < product.length; i++) {
-    const div = document.createElement("div");
-    div.className = `product-card-component ${product[i].type}`;
+    html += `<div onclick="productDetail(${i})" class="product-card-component ${product[i].type}">
+                <img src="/image/product/${product[i].img}" alt="">
+                <div class="product-card-des">
+                    <p class="name-product">${product[i].name}</p>
+                    <p class="price-product">${numberWithCommas(product[i].price) + " ฿"}</p>
+                </div>
+            </div>`
 
-    const imageProduct = document.createElement("img");
-    imageProduct.src = `/image/product/${product[i].img}`;
-
-    const divDes = document.createElement("div");
-    divDes.className = "product-card-des";
-
-    const nameProduct = document.createElement("p");
-    nameProduct.className = "name-product";
-    nameProduct.textContent = product[i].name;
-
-    const priceProduct = document.createElement("p");
-    priceProduct.className = "price-product";
-    priceProduct.textContent = numberWithCommas(product[i].price) + " ฿";
-
-    div.appendChild(imageProduct);
-    div.appendChild(divDes);
-    divDes.appendChild(nameProduct);
-    divDes.appendChild(priceProduct);
-
-    productCart.appendChild(div);
+    document.querySelector("#productCard").innerHTML = html;
 
 }
+
+
+function menuProduct(menu) {
+    console.log(menu)
+    document.querySelector(".product-card-component").style.display = "none";
+    if (menu === 'all') {
+        document.querySelector(".product-card-component").style.display = "block";
+    } else {
+        document.querySelector("." + menu).style.display = "block";
+    }
+}
+
+// คลิ๊กที่ product จะไปอีก page
+var productIndex = 0
+function productDetail(detail) {
+    productIndex = detail;
+    console.log(productIndex);
+    window.location.assign ("http://127.0.0.1:5500/HTML/sproduct.html") ;
+    
+}
+
 
 // ทำลูกน้ำ หน่วยเงิน
 function numberWithCommas(x) {
@@ -135,18 +141,6 @@ function numberWithCommas(x) {
         x = x.replace(pattern, "$1,$2");
     return x;
 }
-
-
-function menuProduct(menu) {
-    console.log(menu)
-    document.querySelector(".product-card-component").style.display = "none";
-    if (menu == 'all') {
-        document.querySelector(".product-card-component").style.display = "block";
-    } else {
-        document.querySelector('.'+menu).style.display = "block";
-    }
-}
-
 
 
 

@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <!-- ข้อมูลสินค้า รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า onclick="window.location.href='sproduct.html'"-->
+        <!-- ข้อมูลสินค้า รูปภาพ,ชื่อ,ราคา,ประเภทสินค้า -->
         <div id="productCard" class="product-card" >
 
         </div>
@@ -157,32 +157,32 @@
         </div>
     </div>
 
-    <!-- modal cart-->
-    <div class="modal" style="display: none;">
-        <div class="bg-modal">
-            <div class="modal-page">
-                <div class="modal-text-header">
+    <!-- addToCart-->
+    <div id="addToCart" style="display: none;">
+        <div onclick="closeAddToCart()" class="bg-addToCart">
+            <div class="addToCart-page">
+                <div class="addToCart-text-header">
                     <h2>Order Now</h2>
                 </div>
-                <div class="modal-cartlist-items">
-                    <div class="modal-cartlist-left">
-                        <div class="modal-image-product">
-                            <img src="/image/product/adidas-product.jpg" alt="">
+                <div class="addToCart-cartlist-items">
+                    <div class="addToCart-cartlist-left">
+                        <div class="addToCart-image-product">
+                            <img id="addImage" src="/image/product/adidas-product.jpg" alt="">
                         </div>
-                        <div class="modal-description">
-                            <h4>Adidas original shoes</h4>
-                            <p>Size : <span> 6 UK</span></p>
-                            <p>1250 ฿</p>
+                        <div class="addToCart-description">
+                            <h4 id="addName">Adidas original shoes</h4>
+                            <!-- <p>Size : <span> 6 UK</span></p> -->
+                            <p id="addPrice">1250 ฿</p>
                         </div>
                     </div>
-                    <div class="modal-cartlist-right">
+                    <div class="addToCart-cartlist-right">
                         <i class="fa-solid fa-minus"></i>
-                        <span class="modal-product-count">1</span>
+                        <span class="addToCart-product-count">1</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                 </div>
-                <div class="modal-button">
-                    <button class="cancel-btn">Cancel</button>
+                <div class="addToCart-button">
+                    <button onclick="closeAddToCart()" class="cancel-btn">Cancel</button>
                     <button class="buy-btn">Buy</button>
                 </div>
             </div>
@@ -191,6 +191,8 @@
 </body>
 
 <script src="/Javascript/Home.js"></script>
+
+
 
 
 </html>
