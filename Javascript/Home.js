@@ -117,6 +117,15 @@ for (let i = 0; i < product.length; i++) {
                 </div>
             </div>`
 }
+// product.forEach(function(item, index) {
+//     html += `<div onclick="productDetail(${index})" class="product-card-component ${item.type}">
+//                 <img src="/image/product/${item.img}" alt="">
+//                 <div class="product-card-des">
+//                     <p class="name-product">${item.name}</p>
+//                     <p class="price-product">${numberWithCommas(item.price) + " ฿"}</p>
+//                 </div>
+//             </div>`
+// })
 document.querySelector("#productCard").innerHTML = html;
 
 
